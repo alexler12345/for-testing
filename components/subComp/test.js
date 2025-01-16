@@ -4,7 +4,7 @@ export function FormCal (l) {
   try {
   console.log(l.length)
   } catch {
-    throw new Error("data may be null")
+    console.error("data may be null")
   }
   const data = l
   const numtoDay = [
