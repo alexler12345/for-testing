@@ -80,7 +80,6 @@ export default function Timetable (p) {
   console.log(
     'it looks like your looking at the  source code lucky for you all of it is on https://github.com/alexler12345/Vaneetruckwash.git'
   )
-console.log(who)
 
     
 
@@ -93,7 +92,7 @@ console.log(who)
     const nextDay = new Date(today) // Clone the current date
     nextDay.setDate(today.getDate() + i) // Increment the date
     next7Days.push(formatter.format(nextDay)) // Format and add to the array
-    console.log('data: ',next7Days[i], who[next7Days[i]])
+    
   }
 
   const toggleData = () => {
@@ -160,7 +159,7 @@ console.log(who)
         key={index}
         id={index.toString()}
         className={`focus:border-3 focus:border-blue-100 ${
-          index == 0 && !isOfficeOpen(who) ? 'closed' : 'open'
+          index == 0 ? !isOfficeOpen(who) ? 'closed' : 'open':''
         }`}
       >
         <th>{next7Days[index]}</th>
